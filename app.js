@@ -43,7 +43,7 @@ app.use(
         host: 'localhost',
         user: 'root', // your mysql user
         password : '', // your mysql password
-        port : 3306, //port mysql
+        port : process.env.PORT || 3306, //port mysql
         database:'skz' // your database name
     },'pool') //or single
 );
