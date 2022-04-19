@@ -1,0 +1,66 @@
+doctype html
+html
+	head
+		title
+			| #{title}
+		meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport')
+		link(rel='stylesheet', href='/adminlte/bootstrap/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/font-awesome/css/font-awesome.css')
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css')
+		link(rel='stylesheet', href='/adminlte/dist/css/AdminLTE.min.css')
+		link(rel='stylesheet', href='/adminlte/plugins/iCheck/square/blue.css')
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+	body.hold-transition.login-page(style="background: url('https://pbs.twimg.com/media/E1XJaDdWYBAfyvb?format=jpg&name=large'); background-attachment:fixed; font-family: 'Poppins', sans-serif;")
+		.row.col-md-12
+			.form.col-md-6(style="margin-left: 26%; margin-right: 26%; margin-top: 5%;")
+				.login-logo
+					
+				.login-box-body(style="background-color: white; border-radius: 25px;")
+					p.login-box-msg(style="margin-bottom: 10px; margin-top: 10px;")
+						img(src="/images/skzz.png", alt="user image" style="width: 32%")
+						br
+						b(style="font-size: 35px; font-family: 'EB Garamond', serif; letter-spacing: 3px;")
+							| Register Page
+					form(action="/register",method="post" style="padding-left: 30px; padding-right: 30px; margin-bottom: 10px;")
+						- if (messages.msg_error) 
+							.alert.alert-danger.alert-dismissable 
+								button.close(type='button', data-dismiss='alert', aria-hidden='true') 
+									| ×
+								h4
+									i.icon.fa.fa-ban
+									| Alert! 
+								| !{messages.msg_error}
+						.form-group.has-feedback
+							input(type="name",placeholder="Nama",name="nama" style="border-radius: 8px;").form-control
+							span.glyphicon.glyphicon-user.form-control-feedback
+						.form-group.has-feedback
+							input(type="email",placeholder="Email",name="email" style="border-radius: 8px;").form-control
+							span.glyphicon.glyphicon-envelope.form-control-feedback
+						.form-group.has-feedback
+							input(type="phone",placeholder="Phone",name="phone" style="border-radius: 8px;").form-control
+							span.glyphicon.glyphicon-phone.form-control-feedback
+						.form-group.has-feedback
+							input(type="password",placeholder="Password",name="password",style="border-radius: 8px;").form-control
+							span.glyphicon.glyphicon-lock.form-control-feedback
+						.row
+							.col-xs-4
+								.checkbox
+									label
+										input(type="checkbox")
+										|  Remember Me
+							.col-xs-4
+								a(href="/login" style="border: none; border-radius: 5px; background-color: black;").btn.btn-primary.btn-block.btn-flat
+									| Sign In
+							.col-xs-4
+								button(type="submit" style="border: none; border-radius: 5px; background-color: black;").btn.btn-primary.btn-block.btn-flat
+									| Register
+							
+
+script(type='text/javascript', src='/adminlte/plugins/jQuery/jquery-2.2.3.min.js')
+script(type='text/javascript', src='/adminlte/bootstrap/js/bootstrap.min.js')
+script(type='text/javascript', src='/adminlte/plugins/iCheck/icheck.min.js')
+script(type='text/javascript', src='/adminlte/dist/js/login.js')

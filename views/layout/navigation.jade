@@ -1,0 +1,44 @@
+header.main-header
+    a(href='/').logo
+        span.logo-mini
+            <b>SKZ</b>
+        span.logo-lg
+            | Stray Kids
+    nav(role='navigation').navbar.navbar-static-top
+        a(href='#', role='button', data-toggle='offcanvas').sidebar-toggle
+            span.sr-only Toggle Navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        div.navbar-custom-menu
+            ul.nav.navbar-nav
+                    li.dropdown.user.user-menu
+                        a(href='#',data-toggle='dropdown').dropdown-toggle
+                            img(src='/images/crop.png',alt='UserImage').user-image
+                            span.hidden-xs
+                                | Aghisna Aulia Rahma
+                        ul.dropdown-menu
+                            li.user-header
+                                img(src='/images/crop.png',alt='UserImage').img-circle
+                                p
+                                    | Aghisna Aulia Rahma
+                                    small
+                                        | Joined 2021
+                            li.user-body
+                                .row
+                                    .col-xs-4.text-center
+                                        a(href='#')
+                                            | NCTZen
+                                    .col-xs-4.text-center
+                                        a(href='#')
+                                            | Stay
+                                    .col-xs-4.text-center
+                                        a(href='#')
+                                            | Treasure Maker
+                            li.user-footer
+                                .pull-left
+                                    a(href='#').btn.btn-default.btn-flat
+                                        | Profile
+                                .pull-right
+                                    a(href='/logout').btn.btn-default.btn-flat
+                                        | Sign out
